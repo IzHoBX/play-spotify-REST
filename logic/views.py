@@ -15,8 +15,7 @@ def index(request):
 def f(request):
 
     print("sending response...")
-
-     return HttpResponse(status=200)
+    return HttpResponse(status=200)
 
 
 def db(request):
