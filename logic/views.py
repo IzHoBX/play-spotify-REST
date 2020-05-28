@@ -22,11 +22,13 @@ def f(request):
     2. get devices for device id
     3. done'''
     #user, id, secret = getData(reqeust.get_full_path())
+    print("received")
     user = "Iz Ho"
     id = "e28a9982e181499dbdb8b8ae80e1e993"
     secret = "3cb162e2569e423aa3b1dde6493c9e14"
     scopes = "user-read-playback-state user-modify-playback-state"
     token = spotipy.util.prompt_for_user_token(user, scopes, client_id=id, client_secret=secret, redirect_uri="http://localhost:8888")
+    print("token done")
     sp = spotipy.Spotify(auth=token)
     deviceId = sp.devices()['devices'][0]['id']
     sp.start_playback(device_id=deviceId)
