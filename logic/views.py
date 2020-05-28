@@ -22,7 +22,7 @@ def f(request):
     2. get devices for device id
     3. done'''
     #user, id, secret = getData(reqeust.get_full_path())
-    user = "x
+    user = "x"
     id = "e28a9982e181499dbdb8b8ae80e1e993"
     secret = "3cb162e2569e423aa3b1dde6493c9e14"
     scopes = "user-read-playback-state user-modify-playback-state"
